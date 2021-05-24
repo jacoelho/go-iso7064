@@ -2,11 +2,11 @@
 
 [![GoDoc](https://godoc.org/github.com/jacoelho/go-iso7064?status.svg)](https://pkg.go.dev/github.com/jacoelho/go-iso7064?tab=overview)
 
-Go check character system implementation as described in [ISO/IEC 7064:2003](https://www.iso.org/standard/31531.html).
+Check character system implementation in [Go](https://golang.org) as described in [ISO/IEC 7064:2003](https://www.iso.org/standard/31531.html).
 
 ## Instalation
 
-```go
+```bash
 go get -u github.com/jacoelho/go-iso7064/iso7064
 ```
 
