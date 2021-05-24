@@ -12,6 +12,9 @@ func TestModulo661Radix26(t *testing.T) {
 		{input: "XKFSHTWWCOMYYASPSYTHJW", want: "CJ"},
 		{input: "BAISDLAFK", want: "BM"},
 		{input: "SOMETHING", want: "IF"},
+		{input: "LTXOIHFVJDZEIVNXTQRPYZ", want: "IC"},
+		{input: "KCBMMBQOYSHXHVOTGSDXKL", want: "NU"},
+		{input: "MHPPPXHROQETTHJDRWSMPJ", want: "MP"},
 	}
 	for _, tt := range tests {
 		tt := tt
