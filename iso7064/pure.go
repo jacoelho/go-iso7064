@@ -13,8 +13,7 @@ type (
 func pure(modulus, radix int, doubleChecksum bool, from fromAlphabet, to toAlphabet, input string) string {
 	var sum int
 	for _, r := range input {
-		v := from(r)
-		intermediate := (sum + v) * radix
+		intermediate := (sum + from(r)) * radix
 		sum = intermediate % modulus // discard modulus multiples
 	}
 
