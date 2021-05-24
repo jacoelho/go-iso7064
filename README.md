@@ -29,9 +29,11 @@ Pure systems:
 
 Hybrid systems:
 
-* `MOD 11-10`
-* `MOD 27-26`
-* `MOD 37-36`
+| Designation | Input (string) | Output (string)   |
+| ----------- | -------------- | ----------------- |
+| `MOD 11,10` | numeric        | 1 digit           |
+| `MOD 27,26` | alphabetic     | 1 letter          |
+| `MOD 37,36` | alpha numeric  | 1 digit or letter |
 
 ## Credits
 

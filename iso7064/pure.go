@@ -10,20 +10,22 @@ type (
 
 // pure system recursive method
 // multiples of the modulo are discarded
-func pure(modulus, radix int, doubleChecksum bool, from fromAlphabet, to toAlphabet, input string) string {
+func pure(modulo, radix int, doubleCharacterChecksum bool, from fromAlphabet, to toAlphabet, input string) string {
 	var sum int
 	for _, r := range input {
 		intermediate := (sum + from(r)) * radix
-		sum = intermediate % modulus // discard modulus multiples
+		sum = intermediate % modulo // discard modulo multiples
 	}
 
-	if doubleChecksum {
-		sum = (sum * radix) % modulus
+	// compute once more if double character checksum
+	// equivalent to suffix the initial value from the respective alphabet
+	if doubleCharacterChecksum {
+		sum = (sum * radix) % modulo
 	}
 
-	checksum := (1 + modulus - sum) % modulus
+	checksum := (1 + modulo - sum) % modulo
 
-	if !doubleChecksum {
+	if !doubleCharacterChecksum {
 		return to(checksum)
 	}
 
@@ -33,7 +35,7 @@ func pure(modulus, radix int, doubleChecksum bool, from fromAlphabet, to toAlpha
 // Modulo11Radix2 generates check character in accordance with ISO/IEC 7064, MOD 11–2
 // Designation 1
 func Modulo11Radix2(input string) string {
-	return pure(11, 2, false, numericPlusXToValue, numericPlusXToString, input)
+	return pure(11, 2, false, numericToValue, numericPlusXToString, input)
 }
 
 // Modulo37Radix2 generates check character in accordance with ISO/IEC 7064, MOD 37–2
