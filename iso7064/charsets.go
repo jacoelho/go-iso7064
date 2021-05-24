@@ -4,7 +4,6 @@ const (
 	digits               = "0123456789"
 	digitsPlusX          = digits + "X"
 	alpha                = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-	alphanumeric         = digits + alpha
 	alphanumericPlusStar = digits + alpha + "*"
 )
 
