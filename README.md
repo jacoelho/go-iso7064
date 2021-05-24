@@ -12,11 +12,39 @@ go get -u github.com/jacoelho/go-iso7064/iso7064
 
 ## Usage
 
+Import:
+```go
+import "github.com/jacoelho/go-iso7064/iso7064"
+```
+
+Usage
 ```go
 iso7064.Modulo11Radix2("079")
 // output: "X"
 ```
 
+More examples in godoc.
+
+## Normalise
+
+Check systems are not validating if the input is within the expected values, if required, the following function are provided:
+
+```go
+iso7064.NormaliseNumeric("1A3 4")
+// output: "134"
+```
+
+```go
+iso7064.NormaliseAlphabetic("aB1c")
+// output: "ABC"
+```
+
+```go
+iso7064.NormaliseAlphaNumeric("aB1 c")
+// output: "AB1C"
+```
+
+## Implementation
 Pure systems:
 
 | Designation   | Input (string) | Output (string)          |
