@@ -11,6 +11,8 @@ func TestModulo37Radix2(t *testing.T) {
 	}{
 		{input: "G123489654321", want: "Y"},
 		{input: "A999915000001", want: "M"},
+		{input: "LMOSBYFCTRSSJCB3X6U9DUBLKNIH03FO6X963TGXYAHG", want: "*"},
+		{input: "G7N286AL39FFQNU6BH8SMJB5VGMBCB6WPGMWJK800VU7K", want: "P"},
 	}
 	for _, tt := range tests {
 		tt := tt
