@@ -50,12 +50,6 @@ func Modulo97Radix10(input string) string {
 	return pure(97, 10, true, numericToValue, numericToString, input)
 }
 
-// Modulo97Radix10Alphanumeric variant generates check characters in accordance with ISO/IEC 7064, MOD 97–10
-// Supports an alphanumeric input, used to validate IBANs
-func Modulo97Radix10Alphanumeric(input string) string {
-	return pure(97, 10, true, alphanumericToValue, numericToString, input)
-}
-
 // Modulo661Radix26 generates check characters in accordance with ISO/IEC 7064, MOD 661–26
 // Designation 4
 func Modulo661Radix26(input string) string {
