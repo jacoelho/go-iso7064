@@ -11,4 +11,7 @@ ci-tidy:
 escape:
 	go build -gcflags='-m' ./...
 
-.PHONY: ci-tidy escape test
+bounds:
+	go build -gcflags="-d=ssa/check_bce/debug=3" ./...
+
+.PHONY: ci-tidy escape test bounds
